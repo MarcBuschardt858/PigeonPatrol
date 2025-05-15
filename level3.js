@@ -31,7 +31,7 @@ const playerSpeed = 3;
 let isMoving = false;
 
 // Spieler-Hitbox in alle Richtungen halbieren
-const hitboxReduction = 17;
+const hitboxReduction = 0.5;
 const playerHitbox = {
     width: barc.width * hitboxReduction,
     height: barc.height * hitboxReduction,

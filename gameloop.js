@@ -30,60 +30,42 @@ function spaceKeyPressed() {
 //Gucken ob eine taste losgelassen wurde
 let isUpKeyPressed = false;
 let isDownKeyPressed = false;
-let isLeftKeyPressed = false;
-let isRightKeyPressed = false;
+
+const keysPressed = {
+    up: false,
+    down: false,
+    left: false,
+    right: false,
+};
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === "ArrowUp") keysPressed.up = true;
+    if (e.key === "ArrowDown") keysPressed.down = true;
+    if (e.key === "ArrowLeft") keysPressed.left = true;
+    if (e.key === "ArrowRight") keysPressed.right = true;
+});
+
+window.addEventListener('keyup', (e) => {
+    if (e.key === "ArrowUp") keysPressed.up = false;
+    if (e.key === "ArrowDown") keysPressed.down = false;
+    if (e.key === "ArrowLeft") keysPressed.left = false;
+    if (e.key === "ArrowRight") keysPressed.right = false;
+});
 
 function upKeyReleased() {
-    return true;
+    return !keysPressed.up;
 }
-
 function downKeyReleased() {
-    return true;
+    return !keysPressed.down;
 }
 
 function leftKeyReleased() {
-    return true;
+    return !keysPressed.left;
 }
 
 function rightKeyReleased() {
-    return true;
+    return !keysPressed.right;
 }
-
-// Event-Listener für das Drücken der Pfeiltasten
-window.addEventListener('keydown', (event) => {
-        if (event.key === "ArrowUp" && !isUpKeyPressed) {
-            upKeyPressed();
-            isUpKeyPressed = true;
-        }
-        if (event.key === "ArrowDown" && !isDownKeyPressed) {
-            downKeyPressed();
-            isDownKeyPressed = true;
-        }
-        if (event.key === "ArrowLeft" && !isLeftKeyPressed) {
-            leftKeyPressed();
-            isLeftKeyPressed = true;
-        }
-        if (event.key === "ArrowRight" && !isRightKeyPressed) {
-            rightKeyPressed();
-            isRightKeyPressed = true;
-        }
-});
-
-// Event-Listener für das Loslassen der Pfeiltasten
-window.addEventListener('keyup', (event) => {
-    if (event.key === "ArrowUp") {
-        upKeyReleased();
-    }
-    if (event.key === "ArrowDown") {
-        downKeyReleased();
-    }
-    if (event.key === "ArrowLeft") {
-        leftKeyReleased();
-    }
-    if (event.key === "ArrowRight") {
-        rightKeyReleased();
-    }
-});
 
 function flyUp(gameObject, speed = 10, repeat = 2000) {
     let i = 0;
