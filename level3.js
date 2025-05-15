@@ -2924,6 +2924,7 @@ function finalScene(){
 let finalSzeneAdded = false
 app.ticker.add(()=>{
     if (gameOver && !finalSzeneAdded){
+        finalSzeneAdded = true;
         finalScene();
     }
 })
