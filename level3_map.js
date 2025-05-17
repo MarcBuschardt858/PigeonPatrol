@@ -1,4 +1,5 @@
 const app = new PIXI.Application({ width: 1000, height: 800, background: '0x808080'});
+mainContainer = document.getElementById('mainContainer');
 
 //Adler auf dem Boden
 const adler1 = PIXI.Sprite.from('assets/bundestag_deutscher_adler.png');
@@ -739,5 +740,5 @@ tisch16.scale.set(6)
 tisch16.width = 100;;
 app.stage.addChild(tisch16);
 
-document.body.appendChild(app.view);
+mainContainer.appendChild(app.view);
 

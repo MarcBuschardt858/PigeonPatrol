@@ -5,11 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pigeon Patrol | Level 2</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 
 </head>
 <body>
-    <script src="gameloop.js"></script>
+    <header>
+        <h1 class="headline">Pigeon Patrol</h1>
+    </header>
+    <main>
+        
+        <div  id="mainContainer">
+
+        </div>
+
+        <div class="navigation">
+            <h3>Navigation</h3>
+            <p>Nutze die folgenden Links um zwischen den Leveln zu navigieren</p>
+            <ul>
+                <li><a href="/">Level 1</a></li>
+                <li><a href="/scene1.html">Level 2</a><div class="active"></div></li>
+                <li><a href="/scene2.html">Level 3</a></li>
+            </ul>
+        </div>
+    
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script>
+    <script src="gameloop.js"></script>
     <script src="station.js"></script>
     <script src="scene1.js"></script>
 </body>

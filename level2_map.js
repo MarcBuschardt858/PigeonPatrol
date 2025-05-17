@@ -1,5 +1,5 @@
 const app = new PIXI.Application({ width: 800, height: 800, background: 'lightgrey'});
-
+mainContainer = document.getElementById('mainContainer');
 
 const mapBackground = PIXI.Sprite.from('assets/afd_stand_hintergrund.png');
 mapBackground.width = app.screen.width;
@@ -142,4 +142,4 @@ app.stage.addChild(absperrung17);
 app.stage.addChild(absperrung18);
 
 
-document.body.appendChild(app.view);
+mainContainer.appendChild(app.view);

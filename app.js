@@ -1,4 +1,5 @@
 const app = new PIXI.Application({ width: 800, height: 800, background: 'lightgrey'});
+const mainContainer = document.getElementById('mainContainer');
 
 //Hintergrund hinzufügen
 const background = PIXI.Sprite.from('assets/background.png');
@@ -404,6 +405,6 @@ function gameFinished(){
 
 }
 
-document.body.appendChild(app.view);
+mainContainer.appendChild(app.view);
 
 

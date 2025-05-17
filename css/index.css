@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P';
+}
+header{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+.headline{
+    width: 100%;
+    text-align: center;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.speed-anzeige{
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.speed{
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+.distance{
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.navigation{
+    width: 800px;
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+}
+.navigation p{
+    text-align: left;
+    margin-bottom: 2rem;
+}
+ul{
+    list-style-type: square;
+
+}
+li{
+    margin-bottom: 1rem;
+}
+a{
+
+    color: rgb(53, 53, 247);
+}
+
+.active{
+    margin-left: 1rem;
+    content: '';
+    display: inline-block;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 6px;
+    transform: rotate(135deg); /* standardmäßig z. B. nach unten */
+    transition: transform 0.2s;
+  }

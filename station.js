@@ -1,4 +1,5 @@
 const app = new PIXI.Application({ width: 800, height: 800, background: 'lightgrey'});
+mainContainer = document.getElementById('mainContainer');
 
 const kneipe = PIXI.Sprite.from('assets/kneipe.png');
 kneipe.width = app.screen.width;
@@ -104,4 +105,4 @@ text.x = 247;
 text.y = 110;
 app.stage.addChild(text);
 
-document.body.appendChild(app.view);
+mainContainer.appendChild(app.view);
